@@ -13,4 +13,7 @@ BEFORE YOU CONTINUE, MAKE SURE YOU DO THESE STEPS.
 curl -sSL [https://raw.githubusercontent.com/sandwich-makes-code/WoL/main/linuxWoL.py](https://raw.githubusercontent.com/sandwich-makes-code/WoL/main/linuxWoL.py) -o ~/.local/bin/wol && chmod +x ~/.local/bin/wol
 ```
 
-Then, run wol inside your terminal.
+Then, run this command inside your terminal.
+```bash
+wol
+```
