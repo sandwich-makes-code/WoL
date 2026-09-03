@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<link href="https://googleapis.com" rel="stylesheet">
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -7,29 +8,26 @@
   
   <style>
     /* ==========================================
-       1. THEME VARIABLES & RE-STYLING
+       1. THEME VARIABLES
        ========================================== */
-    
-    /* Default Light Mode Colors */
     :root {
       --bg-color: #ffffff;
       --text-color: #1a1a1a;
       --card-bg: #f4f4f4;
-      --button-bg: #007bff;
-      --button-text: #ffffff;
+      --toggle-bg: #f0f0f0;
+      --toggle-hover: #e0e0e0;
     }
 
-    /* Dark Mode Overrides */
     .dark-mode {
       --bg-color: #121212;
       --text-color: #f5f5f5;
       --card-bg: #1e1e1e;
-      --button-bg: #bb86fc;
-      --button-text: #121212;
+      --toggle-bg: #2a2a2a;
+      --toggle-hover: #3a3a3a;
     }
 
     /* ==========================================
-       2. PAGE LAYOUT STYLES
+       2. PAGE LAYOUT
        ========================================== */
     body {
       background-color: var(--bg-color);
@@ -40,8 +38,8 @@
       align-items: center;
       height: 100vh;
       margin: 0;
-      /* Smooth transition when swapping themes */
       transition: background-color 0.3s ease, color 0.3s ease; 
+      position: relative; /* Allows absolute positioning for the toggle */
     }
 
     .card {
@@ -54,33 +52,45 @@
       max-width: 400px;
     }
 
-    button {
-      background-color: var(--button-bg);
-      color: var(--button-text);
+    /* ==========================================
+       3. TOP-RIGHT ICON TOGGLE BUTTON
+       ========================================== */
+    #theme-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: var(--toggle-bg);
       border: none;
-      padding: 12px 24px;
-      font-size: 1rem;
-      font-weight: 600;
-      border-radius: 6px;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
       cursor: pointer;
-      margin-top: 1rem;
+      font-size: 1.3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
       transition: background-color 0.3s ease, transform 0.1s ease;
     }
 
-    button:active {
-      transform: scale(0.98);
+    #theme-toggle:hover {
+      background-color: var(--toggle-hover);
+    }
+
+    #theme-toggle:active {
+      transform: scale(0.95);
     }
   </style>
 </head>
 <body>
 
-  <!-- ==========================================
-       3. HTML STRUCTURE
-       ========================================== -->
+  <!-- Fixed Top-Right Icon Button -->
+  <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+
+  <!-- Main Content Card -->
   <div class="card">
     <h1>Theme Switcher</h1>
-    <p>This layout seamlessly swaps between light and dark modes while remembering your choice.</p>
-    <button id="theme-toggle">Switch to Dark Mode</button>
+    <p>Look at the top-right corner to toggle between light and dark modes.</p>
   </div>
 
   <!-- ==========================================
@@ -88,28 +98,27 @@
        ========================================== -->
   <script>
     const toggleBtn = document.getElementById('theme-toggle');
-
-    // Check localStorage for a previously saved theme choice
     const savedTheme = localStorage.getItem('theme');
 
-    // If the user previously picked dark mode, apply it right away
+    // Apply saved theme preference right away
     if (savedTheme === 'dark') {
       document.body.classList.add('dark-mode');
-      toggleBtn.textContent = 'Switch to Light Mode';
+      toggleBtn.textContent = '☀️'; // Show sun icon in dark mode
+    } else {
+      toggleBtn.textContent = '🌙'; // Show moon icon in light mode
     }
 
-    // Listen for button clicks to toggle the theme
+    // Handle clicks
     toggleBtn.addEventListener('click', () => {
       document.body.classList.toggle('dark-mode');
       
-      // Determine what state we just switched into
       const isDarkMode = document.body.classList.contains('dark-mode');
       
       if (isDarkMode) {
-        toggleBtn.textContent = 'Switch to Light Mode';
+        toggleBtn.textContent = '☀️';
         localStorage.setItem('theme', 'dark');
       } else {
-        toggleBtn.textContent = 'Switch to Dark Mode';
+        toggleBtn.textContent = '🌙';
         localStorage.setItem('theme', 'light');
       }
     });
@@ -119,7 +128,8 @@
 </html>
 
 
-<link href="https://googleapis.com" rel="stylesheet">
+
+
 <p style="font-family: 'Montserrat', sans-serif; font-weight: 700;">
   WoL (Windows on Linux) 
 </p>
