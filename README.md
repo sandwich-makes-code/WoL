@@ -1,6 +1,6 @@
 ![Python](https://img.shields.io/badge/python-3-blue)
 ![Size](https://img.shields.io/badge/size-27%20KB-brightgreen)
-![License](https://img.shields.io/badge/license-MIT-blue)
+![License](https://img.shields.io/badge/license-GPL--3.0-blue)
 ![Stars](https://img.shields.io/github/stars/sandwich-makes-code/WoL?style=social)
 
 # WoL
