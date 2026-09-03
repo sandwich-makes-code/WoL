@@ -20,7 +20,7 @@ wol
 You will be asked to download a specific version of modified Windows designed for lower-end computers,
 So select a version;
 
-(e.g. WoL 23H2 x64 (Windows 11), so select the number 4.)
+(e.g. WoL 23H2 x64 (Windows 11), so select the number 1.)
 
 <img src="gifs/2026-09-03 15-25-11.gif" width="750" alt="Tutorial GIF">
 
