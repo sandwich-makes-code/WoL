@@ -1,3 +1,8 @@
+![Python](https://img.shields.io/badge/python-3-blue)
+![Size](https://img.shields.io/badge/size-27%20KB-brightgreen)
+![License](https://img.shields.io/badge/license-MIT-blue)
+![Stars](https://img.shields.io/github/stars/sandwich-makes-code/WoL?style=social)
+
 # WoL
 Windows on Linux without the complicated stuff.
 
