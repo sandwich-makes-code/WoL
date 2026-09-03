@@ -22,6 +22,9 @@ So select a version;
 
 (e.g. WoL 2303 x86 (Windows 10), so select the number 4.)
 
+<img src="gifs/2026-09-03 15-25-11.gif" width="750" alt="Tutorial GIF">
+
+
 and continue.
 Wait until the ISO downloads, it takes around 3̲0̲ ̲~̲ ̲4̲0̲ ̲m̲i̲n̲u̲t̲e̲s̲,
 It will also download virtualization technology to make your experience smoother. 
