@@ -7,21 +7,23 @@
   
   <style>
     /* ==========================================
-       1. GLOBAL THEME DEFINITION
+       1. VARIABLES (Light Theme Default)
        ========================================== */
     :root {
-      /* This tells the browser the page supports both modes */
-      color-scheme: light dark; 
-      
-      /* light-dark(LIGHT_COLOR, DARK_COLOR) */
-      --bg-color: light-dark(#ffffff, #121212);
-      --text-color: light-dark(#1a1a1a, #f5f5f5);
-      --toggle-bg: light-dark(#f0f0f0, #2a2a2a);
-      --toggle-hover: light-dark(#e0e0e0, #3a3a3a);
+      --bg-color: #ffffff;
+      --text-color: #1a1a1a;
+      --toggle-bg: #f0f0f0;
+    }
+
+    /* 2. Overrides when body has the .dark-mode class */
+    body.dark-mode {
+      --bg-color: #121212;
+      --text-color: #f5f5f5;
+      --toggle-bg: #2a2a2a;
     }
 
     /* ==========================================
-       2. PAGE LAYOUT
+       3. PAGE LAYOUT
        ========================================== */
     body {
       background-color: var(--bg-color);
@@ -33,7 +35,7 @@
     }
 
     /* ==========================================
-       3. TOP-RIGHT ICON TOGGLE BUTTON
+       4. TOP-RIGHT ICON TOGGLE BUTTON
        ========================================== */
     #theme-toggle {
       position: fixed; 
@@ -50,43 +52,38 @@
       justify-content: center;
       align-items: center;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-      transition: background-color 0.2s ease, transform 0.1s ease;
       z-index: 1000; 
-    }
-
-    #theme-toggle:hover {
-      background-color: var(--toggle-hover);
-    }
-
-    #theme-toggle:active {
-      transform: scale(0.95);
     }
   </style>
 </head>
 <body>
 
   <!-- Fixed Top-Right Icon Button -->
-  <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+  <button id="theme-toggle">🌙</button>
 
   <!-- YOUR CONTENT GOES HERE -->
   <h1>My Document Title</h1>
-  <p>Start writing your text here. Click the icon in the top right to switch themes.</p>
+  <p>Start writing your text directly here...</p>
 
   <!-- ==========================================
-       4. ONE-LINE JAVASCRIPT FUNCTIONALITY
+       5. WORKING JAVASCRIPT
        ========================================== */
   <script>
     const toggleBtn = document.getElementById('theme-toggle');
 
     toggleBtn.addEventListener('click', () => {
-      // Toggle the browser color-scheme between light and dark
-      const isDark = document.documentElement.style.colorScheme === 'dark';
-      document.documentElement.style.colorScheme = isDark ? 'light' : 'dark';
+      // Toggle the class on the body tag
+      document.body.classList.toggle('dark-mode');
       
-      // Toggle the icon emoji instantly
-      toggleBtn.textContent = isDark ? '🌙' : '☀️';
+      // Check if it's currently dark to swap the emoji icon
+      if (document.body.classList.contains('dark-mode')) {
+        toggleBtn.textContent = '☀️';
+      } else {
+        toggleBtn.textContent = '🌙';
+      }
     });
   </script>
 
 </body>
 </html>
+
