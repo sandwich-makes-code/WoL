@@ -7,21 +7,17 @@
   
   <style>
     /* ==========================================
-       1. THEME VARIABLES
+       1. GLOBAL THEME DEFINITION
        ========================================== */
     :root {
-      --bg-color: #ffffff;
-      --text-color: #1a1a1a;
-      --toggle-bg: #f0f0f0;
-      --toggle-hover: #e0e0e0;
-    }
-
-    /* Target the body element when .dark-mode class is present */
-    body.dark-mode {
-      --bg-color: #121212;
-      --text-color: #f5f5f5;
-      --toggle-bg: #2a2a2a;
-      --toggle-hover: #3a3a3a;
+      /* This tells the browser the page supports both modes */
+      color-scheme: light dark; 
+      
+      /* light-dark(LIGHT_COLOR, DARK_COLOR) */
+      --bg-color: light-dark(#ffffff, #121212);
+      --text-color: light-dark(#1a1a1a, #f5f5f5);
+      --toggle-bg: light-dark(#f0f0f0, #2a2a2a);
+      --toggle-hover: light-dark(#e0e0e0, #3a3a3a);
     }
 
     /* ==========================================
@@ -77,44 +73,20 @@
   <p>Start writing your text here. Click the icon in the top right to switch themes.</p>
 
   <!-- ==========================================
-       4. JAVASCRIPT FUNCTIONALITY
+       4. ONE-LINE JAVASCRIPT FUNCTIONALITY
        ========================================== */
   <script>
     const toggleBtn = document.getElementById('theme-toggle');
 
-    // 1. Core function to set the theme explicitly
-    function setTheme(theme) {
-      if (theme === 'dark') {
-        document.body.classList.add('dark-mode');
-        toggleBtn.textContent = '☀️';
-        try { localStorage.setItem('theme', 'dark'); } catch(e) {}
-      } else {
-        document.body.classList.remove('dark-mode');
-        toggleBtn.textContent = '🌙';
-        try { localStorage.setItem('theme', 'light'); } catch(e) {}
-      }
-    }
-
-    // 2. Load the saved preference safely
-    let savedTheme = 'light';
-    try {
-      savedTheme = localStorage.getItem('theme');
-    } catch (e) {
-      // Local storage might be blocked in some local file environments
-      console.log("Local storage is restricted."); 
-    }
-
-    // Initialize page with the correct theme
-    setTheme(savedTheme);
-
-    // 3. Toggle theme cleanly on button click
     toggleBtn.addEventListener('click', () => {
-      const isDarkNow = document.body.classList.contains('dark-mode');
-      // If it is dark now, switch it to light. Otherwise, switch to dark.
-      setTheme(isDarkNow ? 'light' : 'dark');
+      // Toggle the browser color-scheme between light and dark
+      const isDark = document.documentElement.style.colorScheme === 'dark';
+      document.documentElement.style.colorScheme = isDark ? 'light' : 'dark';
+      
+      // Toggle the icon emoji instantly
+      toggleBtn.textContent = isDark ? '🌙' : '☀️';
     });
   </script>
 
 </body>
 </html>
-
