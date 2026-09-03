@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-<link href="https://googleapis.com" rel="stylesheet">
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -18,7 +16,8 @@
       --toggle-hover: #e0e0e0;
     }
 
-    .dark-mode {
+    /* Target the body element when .dark-mode class is present */
+    body.dark-mode {
       --bg-color: #121212;
       --text-color: #f5f5f5;
       --toggle-bg: #2a2a2a;
@@ -26,22 +25,22 @@
     }
 
     /* ==========================================
-       2. PAGE LAYOUT (Write your text here)
+       2. PAGE LAYOUT
        ========================================== */
     body {
       background-color: var(--bg-color);
       color: var(--text-color);
       font-family: system-ui, -apple-system, sans-serif;
       margin: 0;
-      padding: 40px; /* Gives your text breathing room from edges */
-      transition: background-color 0.3s ease, color 0.3s ease; 
+      padding: 40px; 
+      transition: background-color 0.2s ease, color 0.2s ease; 
     }
 
     /* ==========================================
        3. TOP-RIGHT ICON TOGGLE BUTTON
        ========================================== */
     #theme-toggle {
-      position: fixed; /* Keeps button in place even if you scroll down */
+      position: fixed; 
       top: 20px;
       right: 20px;
       background-color: var(--toggle-bg);
@@ -55,8 +54,8 @@
       justify-content: center;
       align-items: center;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-      transition: background-color 0.3s ease, transform 0.1s ease;
-      z-index: 1000; /* Ensures it sits on top of your text */
+      transition: background-color 0.2s ease, transform 0.1s ease;
+      z-index: 1000; 
     }
 
     #theme-toggle:hover {
@@ -75,47 +74,47 @@
 
   <!-- YOUR CONTENT GOES HERE -->
   <h1>My Document Title</h1>
-  <p>Start writing your text or adding your elements here. The text will automatically switch between dark and light colors when you tap the icon in the top-right corner.</p>
+  <p>Start writing your text here. Click the icon in the top right to switch themes.</p>
 
   <!-- ==========================================
        4. JAVASCRIPT FUNCTIONALITY
        ========================================== */
   <script>
     const toggleBtn = document.getElementById('theme-toggle');
-    const savedTheme = localStorage.getItem('theme');
 
-    // Apply saved theme preference right away
-    if (savedTheme === 'dark') {
-      document.body.classList.add('dark-mode');
-      toggleBtn.textContent = '☀️';
-    } else {
-      document.body.classList.add('light-mode');
-      toggleBtn.textContent = '🌙';
+    // 1. Core function to set the theme explicitly
+    function setTheme(theme) {
+      if (theme === 'dark') {
+        document.body.classList.add('dark-mode');
+        toggleBtn.textContent = '☀️';
+        try { localStorage.setItem('theme', 'dark'); } catch(e) {}
+      } else {
+        document.body.classList.remove('dark-mode');
+        toggleBtn.textContent = '🌙';
+        try { localStorage.setItem('theme', 'light'); } catch(e) {}
+      }
     }
 
-    // Handle clicks
+    // 2. Load the saved preference safely
+    let savedTheme = 'light';
+    try {
+      savedTheme = localStorage.getItem('theme');
+    } catch (e) {
+      // Local storage might be blocked in some local file environments
+      console.log("Local storage is restricted."); 
+    }
+
+    // Initialize page with the correct theme
+    setTheme(savedTheme);
+
+    // 3. Toggle theme cleanly on button click
     toggleBtn.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-      
-      const isDarkMode = document.body.classList.contains('dark-mode');
-      
-      if (isDarkMode) {
-        toggleBtn.textContent = '☀️';
-        localStorage.setItem('theme', 'dark');
-      } else {
-        toggleBtn.textContent = '🌙';
-        localStorage.setItem('theme', 'light');
-      }
+      const isDarkNow = document.body.classList.contains('dark-mode');
+      // If it is dark now, switch it to light. Otherwise, switch to dark.
+      setTheme(isDarkNow ? 'light' : 'dark');
     });
   </script>
 
 </body>
 </html>
 
-
-
-
-
-<p style="font-family: 'Montserrat', sans-serif; font-weight: 700;">
-  WoL (Windows on Linux) 
-</p>
