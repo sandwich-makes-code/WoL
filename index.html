@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <link href="https://googleapis.com" rel="stylesheet">
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Light/Dark Mode Switcher</title>
+  <title>Your Webpage</title>
   
   <style>
     /* ==========================================
@@ -13,7 +14,6 @@
     :root {
       --bg-color: #ffffff;
       --text-color: #1a1a1a;
-      --card-bg: #f4f4f4;
       --toggle-bg: #f0f0f0;
       --toggle-hover: #e0e0e0;
     }
@@ -21,42 +21,27 @@
     .dark-mode {
       --bg-color: #121212;
       --text-color: #f5f5f5;
-      --card-bg: #1e1e1e;
       --toggle-bg: #2a2a2a;
       --toggle-hover: #3a3a3a;
     }
 
     /* ==========================================
-       2. PAGE LAYOUT
+       2. PAGE LAYOUT (Write your text here)
        ========================================== */
     body {
       background-color: var(--bg-color);
       color: var(--text-color);
       font-family: system-ui, -apple-system, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
       margin: 0;
+      padding: 40px; /* Gives your text breathing room from edges */
       transition: background-color 0.3s ease, color 0.3s ease; 
-      position: relative; /* Allows absolute positioning for the toggle */
-    }
-
-    .card {
-      background-color: var(--card-bg);
-      padding: 2.5rem;
-      border-radius: 12px;
-      text-align: center;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      transition: background-color 0.3s ease;
-      max-width: 400px;
     }
 
     /* ==========================================
        3. TOP-RIGHT ICON TOGGLE BUTTON
        ========================================== */
     #theme-toggle {
-      position: absolute;
+      position: fixed; /* Keeps button in place even if you scroll down */
       top: 20px;
       right: 20px;
       background-color: var(--toggle-bg);
@@ -71,6 +56,7 @@
       align-items: center;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
       transition: background-color 0.3s ease, transform 0.1s ease;
+      z-index: 1000; /* Ensures it sits on top of your text */
     }
 
     #theme-toggle:hover {
@@ -87,15 +73,13 @@
   <!-- Fixed Top-Right Icon Button -->
   <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
 
-  <!-- Main Content Card -->
-  <div class="card">
-    <h1>Theme Switcher</h1>
-    <p>Look at the top-right corner to toggle between light and dark modes.</p>
-  </div>
+  <!-- YOUR CONTENT GOES HERE -->
+  <h1>My Document Title</h1>
+  <p>Start writing your text or adding your elements here. The text will automatically switch between dark and light colors when you tap the icon in the top-right corner.</p>
 
   <!-- ==========================================
        4. JAVASCRIPT FUNCTIONALITY
-       ========================================== -->
+       ========================================== */
   <script>
     const toggleBtn = document.getElementById('theme-toggle');
     const savedTheme = localStorage.getItem('theme');
@@ -103,9 +87,10 @@
     // Apply saved theme preference right away
     if (savedTheme === 'dark') {
       document.body.classList.add('dark-mode');
-      toggleBtn.textContent = '☀️'; // Show sun icon in dark mode
+      toggleBtn.textContent = '☀️';
     } else {
-      toggleBtn.textContent = '🌙'; // Show moon icon in light mode
+      document.body.classList.add('light-mode');
+      toggleBtn.textContent = '🌙';
     }
 
     // Handle clicks
@@ -126,6 +111,7 @@
 
 </body>
 </html>
+
 
 
 
