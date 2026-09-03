@@ -4,7 +4,7 @@ Windows on Linux without the complicated stuff.
 # Before you continue
 
 BEFORE YOU CONTINUE, MAKE SURE YOU DO THESE STEPS.
-- Make sure you have a decent Wi-Fi speed.
+- Make sure you have a decent Wi-Fi speed to avoid errors.
 - You have QEMU and KVM installed.
 - You have Python interpreter installed.
 # Commands
@@ -16,3 +16,21 @@ Then, run this command inside your terminal.
 ```bash
 wol
 ```
+# App Guide
+You will be asked to download a specific version of modified Windows designed for lower-end computers,
+So select a version;
+
+(e.g. WoL 2303 x86 (Windows 10), so select the number 4.)
+
+and continue.
+Wait until the ISO downloads, it takes around 3̲0̲ ̲~̲ ̲4̲0̲ ̲m̲i̲n̲u̲t̲e̲s̲,
+It will also download virtualization technology to make your experience smoother. 
+
+# ISO Setup
+Now that the ISO is installed, it automatically runs the next batch of commands. 
+
+It will setup your Windows installation and will ask you if you want it to startup on boot, what it should do when Windows shuts down, etc.
+It will make a noise and may speak when the process is done.
+Now it is ready!
+
+
