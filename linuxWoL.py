@@ -790,6 +790,11 @@ qemu_cmd = [
     "-full-screen",
 ]
 
+print("Cleaning up...")
+if os.path.exists(OUTPUT_FILE):
+        os.remove(OUTPUT_FILE)
+        print("Cleaned up unnecessary files.")
+time.sleep(2)
 print("\nLaunching QEMU virtual machine...")
 print(
     "💡 NOTE: When Windows asks where to install, click 'Load Driver' and select"
