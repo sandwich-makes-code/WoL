@@ -35,7 +35,7 @@ Select either CLI or GUI, it's your choice!
 # Guide for GUI version
 This is the GUI VM builder interface for the app:
 
-<img width="1919" height="1003" alt="image" src="https://github.com/user-attachments/assets/67a751f5-648b-493b-b9b9-376816bd6e45" />
+<img width="1918" height="1008" alt="image" src="https://github.com/user-attachments/assets/ecf2b758-cfee-4fd4-be35-1ec2d1125371" />
 
 On the top left, there will be buttons for any version of Windows it supports, and on the left center, you can choose your settings such as RAM, CPU cores, disk size, and what happens when the VM exits! Or even choose your own ISO file for it to emulate.
 On the bottom center, there will be buttons such as Build VM, Delete VM (only use for corrupted VMs or VMs that you don't care about) and Back to mode switch.
@@ -51,7 +51,7 @@ It looks like this:
 <img width="675" height="420" alt="image" src="https://github.com/user-attachments/assets/95d75c9d-2124-4892-b1f8-0d3a16888063" />
 
 
-# Guide for CLI version
+# Guide for Legacy version (1.2 and below)
 
 You will be asked to download a specific version of modified Windows designed for lower-end computers,
 So select a version;
