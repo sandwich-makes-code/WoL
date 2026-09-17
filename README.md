@@ -5,7 +5,17 @@
 # WoL
 Windows on Linux without the complicated stuff.
 
-# Before you continue
+## Minimum specifications
+- At least 8 GB of RAM for Linux (Windows requires 4GB of RAM.)
+- A recommended disk size of 40 GB (on the host machine, not the guest machine.) (Windows requires at least a virtual disk size of 20 GB.)
+- Around 4 or 8 CPU cores (Windows requires at least 2 CPU cores.)
+- A decent GPU of any type.
+Check your specifications with this command.
+```bash
+sudo lshw | less
+```
+
+## Before you continue
 
 BEFORE YOU CONTINUE, MAKE SURE YOU DO THESE STEPS.
 - Make sure you have a decent Wi-Fi speed to avoid errors.
@@ -15,7 +25,7 @@ BEFORE YOU CONTINUE, MAKE SURE YOU DO THESE STEPS.
 ```bash
 sudo apt update && sudo apt install python3-tk
 ```
-# Commands
+## Commands
 ```bash
 curl -sSL [https://raw.githubusercontent.com/sandwich-makes-code/WoL/main/linuxWoL.py](https://raw.githubusercontent.com/sandwich-makes-code/WoL/main/linuxWoL.py) -o ~/.local/bin/wol && chmod +x ~/.local/bin/wol
 ```
@@ -32,12 +42,16 @@ You'll be greeted with this:
 
 Select either CLI or GUI, it's your choice!
 
-# Guide for GUI version
+## Guide for GUI version
 This is the GUI VM builder interface for the app:
 
 <img width="1918" height="1008" alt="image" src="https://github.com/user-attachments/assets/ecf2b758-cfee-4fd4-be35-1ec2d1125371" />
 
-On the top left, there will be buttons for any version of Windows it supports, and on the left center, you can choose your settings such as RAM, CPU cores, disk size, and what happens when the VM exits! Or even choose your own ISO file for it to emulate.
+On the top left, there will be buttons for any version of Windows it supports, and on the left center, you can choose your settings such as RAM, CPU cores, disk size, and what happens when the VM exits! Or even choose your own ISO file for it to emulate with the side panel or the bottom of the window where it says Saved ISOs. It looks like this.
+<img width="156" height="34" alt="image" src="https://github.com/user-attachments/assets/15425cea-1d70-4a70-812b-d538a211d139" />
+<img width="678" height="415" alt="Screenshot 2026-09-17 192510 png" src="https://github.com/user-attachments/assets/b04c87cc-f477-4dda-a603-5b6653c532cf" />
+
+
 On the bottom center, there will be buttons such as Build VM, Delete VM (only use for corrupted VMs or VMs that you don't care about) and Back to mode switch.
 Select your Windows version (e.g. WoL 11 x64) or Custom ISO.
 
@@ -51,7 +65,7 @@ It looks like this:
 <img width="675" height="420" alt="image" src="https://github.com/user-attachments/assets/95d75c9d-2124-4892-b1f8-0d3a16888063" />
 
 
-# Guide for Legacy version (1.2 and below)
+## Guide for Legacy version (1.2 and below)
 
 You will be asked to download a specific version of modified Windows designed for lower-end computers,
 So select a version;
@@ -65,7 +79,7 @@ and continue.
 Wait until the ISO downloads, it takes around 3̲0̲ ̲~̲ ̲4̲0̲ ̲m̲i̲n̲u̲t̲e̲s̲,
 It will also download virtualization technology to make your experience smoother. 
 
-# ISO Setup
+## ISO Setup
 Now that the ISO is installed, it automatically runs the next batch of commands. 
 
 It will setup your Windows installation and will ask you if you want it to startup on boot, what it should do when Windows shuts down, etc.
