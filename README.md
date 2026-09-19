@@ -41,7 +41,24 @@ Then run this command inside your terminal.
 ```bash
 python3 linuxWoL.py
 ```
-The script should launch if you have Python and tkinter installed, if not, check if they are installed and if they're not, the instructions are [here](#before-you-continue)
+The script should launch if you have Python and tkinter installed, if not, check if they are installed and if they're not, the instructions are [here](#before-you-continue) and look at the top of the README
+#### .ZIP installation
+Run this command so your Linux terminal moves to the Downloads folder (or wherever your .ZIP file got saved)
+```bash
+cd $HOME/Downloads
+```
+Then, run this command inside your terminal (replace the Xs with the file version name)
+```bash
+unzip WoL-X.X.zip
+```
+Run this command so your Linux terminal moves to the unzipped folder (change the Downloads folder to where it got saved, then change the Xs to the file version name)
+```bash
+cd $HOME/Downloads/WoL-X.X/WoL-X.X/current
+```
+Now run the Python script.
+```bash
+python3 linuxWoL.py
+```
 
 ### Command-line installation
 ```bash
