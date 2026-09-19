@@ -5,6 +5,10 @@
 # WoL
 Windows on Linux without the complicated stuff.
 
+## Logo
+
+<img alt=image src=https://github.com/sandwich-makes-code/WoL/blob/main/logo/current/Windows%20on%20Linux.png>
+
 ## Minimum specifications
 - At least 8 GB of RAM for Linux (Windows requires 4GB of RAM.)
 - A recommended disk size of 40 GB (on the host machine, not the guest machine.) (Windows requires at least a virtual disk size of 20 GB.)
