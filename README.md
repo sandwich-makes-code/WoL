@@ -86,4 +86,6 @@ It will setup your Windows installation and will ask you if you want it to start
 It will make a noise and may speak when the process is done.
 Now it is ready!
 
+## License
 
+GPL-3.0 -- see [LICENSE](LICENSE).
