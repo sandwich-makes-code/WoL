@@ -29,9 +29,23 @@ BEFORE YOU CONTINUE, MAKE SURE YOU DO THESE STEPS.
 ```bash
 sudo apt update && sudo apt install python3-tk
 ```
-## Commands
+## Installation
+### Installation via the Releases tab
+Go to the [Releases page](https://github.com/sandwich-makes-code/WoL/releases) then download the newest .PY or .ZIP file, both installation methids will be documented here.
+#### .PY installation
+Run this command so your Linux terminal moves to the Downloads folder (or wherever your .PY file got saved)
 ```bash
-curl -sSL [https://raw.githubusercontent.com/sandwich-makes-code/WoL/main/linuxWoL.py](https://raw.githubusercontent.com/sandwich-makes-code/WoL/main/linuxWoL.py) -o ~/.local/bin/wol && chmod +x ~/.local/bin/wol
+cd $HOME/Downloads
+```
+Then run this command inside your terminal.
+```bash
+python3 linuxWoL.py
+```
+The script should launch if you have Python and tkinter installed, if not, check if they are installed and if they're not, the instructions are [here](#before-you-continue)
+
+### Command-line installation
+```bash
+curl -sSL [https://raw.githubusercontent.com/sandwich-makes-code/WoL/main/current/linuxWoL.py](https://raw.githubusercontent.com/sandwich-makes-code/WoL/main/current/linuxWoL.py) -o ~/.local/bin/wol && chmod +x ~/.local/bin/wol
 ```
 
 Then, run this command inside your terminal.
