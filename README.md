@@ -126,4 +126,4 @@ Now it is ready!
 GPL-3.0 -- see [LICENSE](LICENSE).
 ## Issues
 
-Please document any issues here -- [Issues](issues)
+Please document any issues here -- [Issues](https://github.com/sandwich-makes-code/WoL/issues)
