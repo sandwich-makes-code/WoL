@@ -124,3 +124,6 @@ Now it is ready!
 ## License
 
 GPL-3.0 -- see [LICENSE](LICENSE).
+## Issues
+
+Please document any issues here -- [Issues](issues)
