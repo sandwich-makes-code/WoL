@@ -136,8 +136,8 @@ This is the GUI VM builder interface for the app:
      &nbsp;&nbsp;&nbsp;&nbsp;
      <img width="500" alt="Saved ISOs Panel" src="https://github.com/user-attachments/assets/b04c87cc-f477-4dda-a603-5b6653c532cf" />
    </p>
-——-
-You can also select custom display sizes in the Settings panel.
+You can also select custom display sizes in the Settings panel, and you can select a custom ISO to mount.
+---
 2. **Settings:** Choose your settings such as RAM, CPU cores, disk size, and what happens when the VM exits.
 3. **Build VM:** On the bottom center, there will be buttons such as **Build VM**, **Delete VM** (only use for corrupted VMs or VMs that you don't care about), and **Back to mode switch**.
    - Select your Windows version (e.g. WoL 11 x64) or Custom ISO.
