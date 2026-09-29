@@ -35,7 +35,7 @@
 ## 💻 Minimum Specifications
 
 - At least **8 GB of RAM** for Linux (Windows requires at least 4 GB).
-- Recommended disk size of **40 GB** or **128 GB** if you want Windows 11 on the host machine (Windows requires at least a virtual disk size of 20 GB, Windows 11 requires 64 GB).
+- Recommended disk size of **40 GB** or **128 GB** if you want Windows 11 on the VM. (Windows requires at least a virtual disk size of 20 GB, Windows 11 requires 64 GB).
 - Around **4 or 8 CPU cores** (Windows requires at least 2 CPU cores).
 - A decent **GPU** of any type.
 
