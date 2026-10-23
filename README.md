@@ -14,7 +14,7 @@
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 - [Minimum Specifications](#-minimum-specifications)
 - [Before You Continue](#-before-you-continue)
 - [Installation](#-installation)
@@ -32,7 +32,7 @@
 
 ---
 
-## 💻 Minimum Specifications
+## Minimum Specifications
 
 - At least **8 GB of RAM** for Linux (Windows requires at least 4 GB).
 - Recommended disk size of **40 GB** or **128 GB** if you want Windows 11 on the VM. (Windows requires at least a virtual disk size of 20 GB, Windows 11 requires 64 GB).
@@ -46,7 +46,7 @@ sudo lshw | less
 
 ---
 
-## ⚡ Before You Continue
+## Before You Continue
 
 **BEFORE YOU CONTINUE, MAKE SURE YOU DO THESE STEPS:**
 - Make sure you have a decent Wi-Fi speed to avoid errors.
@@ -59,7 +59,7 @@ sudo apt update && sudo apt install python3-tk
 
 ---
 
-## 🚀 Installation
+## Installation
 
 ### Installation via the Releases Tab
 Go to the [Releases page](https://github.com/sandwich-makes-code/WoL/releases) then download the newest `.py` or `.zip` file. Both installation methods are documented here.
@@ -109,7 +109,7 @@ wol
 
 ---
 
-## 📖 App Guide
+## App Guide
 
 You'll be greeted with this:
 
@@ -173,7 +173,7 @@ Now that the ISO is installed, it automatically runs the next batch of commands:
 
 ---
 
-## 🪟 Windows Setup
+## Windows Setup
 
 ### Start Screen
 You'll be greeted with the start screen asking your preferences. Select your preferences to continue.
@@ -202,12 +202,12 @@ Highlight **Red Hat VirtIO SCSI Controller** (or **Red Hat VirtIO Block Driver**
 
 ---
 
-## 📜 License
+## License
 
 Distributed under the **GPL-3.0 License**. See [`LICENSE`](LICENSE) for full details.
 
 ---
 
-## 🐛 Issues
+## Issues
 
 Please document any issues here: [GitHub Issues](https://github.com/sandwich-makes-code/WoL/issues)
