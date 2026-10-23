@@ -204,10 +204,10 @@ Highlight **Red Hat VirtIO SCSI Controller** (or **Red Hat VirtIO Block Driver**
 
 ## License
 
-Distributed under the **GPL-3.0 License**. See [`LICENSE`](LICENSE) for full details.
+Distributed under the **MIT License**. See [`LICENSE`](LICENSE) for full details.
 
 ---
 
 ## Issues
 
-Please document any issues here: [GitHub Issues](https://github.com/sandwich-makes-code/WoL/issues)
+Please document any issues here: [`GitHub Issues`](https://github.com/sandwich-makes-code/WoL/issues)
