@@ -5,7 +5,7 @@
 **Windows on Linux without the complicated stuff.**
 
 [![Python](https://img.shields.io/badge/python-3-blue.svg)](https://www.python.org/)
-[![License](https://img.shields.io/badge/license-GPL--3.0-green.svg)](LICENSE)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Stars](https://img.shields.io/github/stars/sandwich-makes-code/WoL?style=social)](https://github.com/sandwich-makes-code/WoL)
 
 <img src="https://raw.githubusercontent.com/sandwich-makes-code/WoL/main/logo/current/Windows%20on%20Linux.png" alt="WoL Logo" width="450"/>
